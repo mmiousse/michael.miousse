@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="960" viewBox="0 0 640 960" role="img" aria-labelledby="title desc">
+  <title id="title">The Farm Boy's Blade cover</title>
+  <desc id="desc">Stylized fantasy cover with a sword and dramatic sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="960" fill="url(#sky)"/>
+  <circle cx="500" cy="170" r="100" fill="#f59e0b" opacity="0.45"/>
+  <path d="M120 820 L320 420 L520 820 Z" fill="#111827" opacity="0.65"/>
+  <rect x="300" y="280" width="40" height="420" fill="#e5e7eb"/>
+  <rect x="260" y="670" width="120" height="20" fill="#f59e0b"/>
+  <text x="320" y="120" font-family="Georgia, serif" text-anchor="middle" fill="#f9fafb" font-size="44">Michael Miousse</text>
+  <text x="320" y="860" font-family="Georgia, serif" text-anchor="middle" fill="#fef3c7" font-size="54">The Farm Boy's Blade</text>
+  <text x="320" y="905" font-family="Georgia, serif" text-anchor="middle" fill="#d1d5db" font-size="26">Book One of the Trilogy</text>
+</svg>
