@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Michael Miousse Books</title>
+  <desc id="desc">Social sharing image promoting The Farm Boy's Blade trilogy website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="210" fill="#fef3c7" font-family="Georgia, serif" font-size="68">Michael Miousse</text>
+  <text x="80" y="300" fill="#f9fafb" font-family="Georgia, serif" font-size="56">The Farm Boy's Blade</text>
+  <text x="80" y="370" fill="#d1d5db" font-family="Inter, sans-serif" font-size="34">Book 1 of a fantasy trilogy</text>
+</svg>
