@@ -6,7 +6,6 @@ Static bilingual (English/French) website to promote Michael Miousse books.
 
 - `/` language selector
 - `/en/` English home
-- `/en/book.html` English book page
 - `/en/about.html` English author page
 - `/fr/` Accueil français
 - `/fr/livre.html` Page livre française
