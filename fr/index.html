@@ -1,47 +1,938 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Michael Miousse | Romans fantasy</title>
-  <meta name="description" content="Découvrez la trilogie fantasy de Michael Miousse, commencée avec The Farm Boy's Blade, ainsi qu'une page auteur.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://michael.miousse.ca/fr/">
-  <link rel="alternate" hreflang="fr" href="https://michael.miousse.ca/fr/">
-  <link rel="alternate" hreflang="en" href="https://michael.miousse.ca/en/">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <title>L'épée du fils des champs — Michael Miousse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="L'épée du fils des champs — Tome I de la trilogie La Lame du destin par Michael Miousse. Fantasy épique sur un fils de fermier entraîné dans une guerre naissante et une ancienne ténèbre." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://michael.miousse.ca/fr/" />
+  <link rel="alternate" hreflang="fr" href="https://michael.miousse.ca/fr/" />
+  <link rel="alternate" hreflang="en" href="https://michael.miousse.ca/" />
+  <meta name="author" content="Michael Miousse" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="L'épée du fils des champs — Michael Miousse" />
+  <meta property="og:description" content="L'épée du fils des champs — Tome I de la trilogie La Lame du destin par Michael Miousse. Fantasy épique sur un fils de fermier entraîné dans une guerre naissante et une ancienne ténèbre." />
+  <meta property="og:image" content="https://michael.miousse.ca/assets/images/book_one_fr.jpg" />
+  <meta property="og:url" content="https://michael.miousse.ca/fr/" />
+  <meta property="og:site_name" content="Michael Miousse" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="L'épée du fils des champs — Michael Miousse" />
+  <meta name="twitter:description" content="L'épée du fils des champs — Tome I de la trilogie La Lame du destin par Michael Miousse. Fantasy épique sur un fils de fermier entraîné dans une guerre naissante et une ancienne ténèbre." />
+  <meta name="twitter:image" content="https://michael.miousse.ca/assets/images/book_one_fr.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://michael.miousse.ca/fr/",
+        "name": "Michael Miousse",
+        "description": "L'épée du fils des champs — Tome I de la trilogie La Lame du destin par Michael Miousse. Fantasy épique sur un fils de fermier entraîné dans une guerre naissante et une ancienne ténèbre."
+      },
+      {
+        "@type": "Book",
+        "name": "L'épée du fils des champs",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Miousse"
+        },
+        "inLanguage": "fr",
+        "image": "https://michael.miousse.ca/assets/images/book_one_fr.jpg",
+        "description": "L'épée du fils des champs — Tome I de la trilogie La Lame du destin par Michael Miousse. Fantasy épique sur un fils de fermier entraîné dans une guerre naissante et une ancienne ténèbre.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0b0d14;
+      --accent: #f5c76a;
+      --accent-soft: rgba(245, 199, 106, 0.18);
+      --accent-strong: #ffdd8a;
+      --text: #f5f5f7;
+      --muted: #a3a7b7;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --error: #ff6b6b;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+    }
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Michael Miousse | Romans fantasy">
-  <meta property="og:description" content="Découvrez The Farm Boy's Blade, tome 1 d'une trilogie.">
-  <meta property="og:image" content="https://michael.miousse.ca/assets/images/book_one_fr.jpg">
-  <meta property="og:url" content="https://michael.miousse.ca/fr/">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #151827 0, #05060a 55%, #020308 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.5rem 3rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 10, 0.96),
+        rgba(5, 6, 10, 0.88),
+        transparent
+      );
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 40% 60% 55% 45%;
+      background: radial-gradient(circle at 30% 20%, #ffe9b0 0, #f5c76a 30%, #8b5b1f 70%, #1b1207 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 18px 40px rgba(0, 0, 0, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-mark::after {
+      content: "";
+      position: absolute;
+      inset: 18% 22%;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      opacity: 0.7;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .nav-title-main {
+      font-family: "Cinzel", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-title-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width 0.22s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out,
+        border-color 0.15s ease-out;
+      background: none;
+      color: inherit;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 0 0, #fff3c4 0, #f5c76a 40%, #b87a1f 100%);
+      color: #1a1206;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(10, 12, 20, 0.8);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(15, 18, 30, 0.95);
+    }
+
+    .btn span.icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hero {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-copy {
+      position: relative;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.7rem 0.25rem 0.3rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(245, 199, 106, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.2), rgba(5, 6, 10, 0.9));
+      color: var(--accent-strong);
+      font-size: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffe9b0 0, #f5c76a 40%, #8b5b1f 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-strong);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.4rem, 3.2vw + 1.4rem, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-line {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--accent-strong);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(245, 199, 106, 0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-art {
+      position: relative;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -18%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(245, 199, 106, 0.18), transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(88, 130, 255, 0.18), transparent 55%);
+      filter: blur(4px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 26px;
+      padding: 0.9rem;
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.12), rgba(5, 6, 10, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-soft);
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .hero-book {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .hero-book img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: auto 12% -8%;
+      height: 40px;
+      background: radial-gradient(circle at 50% 0, rgba(245, 199, 106, 0.7), transparent 70%);
+      opacity: 0.9;
+      filter: blur(8px);
+    }
+
+    .hero-tag {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-tag span.label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 500;
+      color: var(--accent-strong);
+    }
+
+    .hero-tag span.badge {
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(5, 6, 10, 0.9);
+    }
+
+    .section {
+      margin-top: 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-strong);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 26rem;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+      <a href="#newsletter">Newsletter</a>
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(145deg, rgba(10, 12, 20, 0.96), rgba(5, 6, 10, 0.98));
+      padding: 1.4rem 1.5rem;
+    }
+
+    .card + .card {
+      margin-top: 1rem;
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card-body p + p {
+      margin-top: 0.6rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(5, 6, 10, 0.9);
+      color: var(--muted);
+    }
+
+    .pill.highlight {
+      border-color: rgba(245, 199, 106, 0.7);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .quote-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(245, 199, 106, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.18), rgba(5, 6, 10, 0.98));
+      padding: 1.4rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-card::before {
+      content: "“";
+      position: absolute;
+      font-family: "Cinzel", serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: rgba(245, 199, 106, 0.12);
+      top: -1.2rem;
+      left: 0.4rem;
+    }
+
+    .quote-text {
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 0.7rem;
+    }
+
+    .quote-source {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: auto;
+      padding: 1.5rem 1.5rem 2.2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-strong);
+    }
+
+    .lang-switch {
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.6;
+    }
+
+    .lang-switch a {
+      color: var(--accent-strong);
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .grid-two,
+      .newsletter {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .nav {
+        padding-inline: 1.2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+
+      .shell {
+        padding-inline: 1.2rem;
+      }
+
+      .newsletter {
+        padding: 1.3rem 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="shell top-nav">
-    <a href="/fr/" class="brand">Michael Miousse</a>
-    <nav aria-label="Navigation principale">
-      <a href="/fr/">Livre</a>
-      <a href="/fr/a-propos.html">À propos</a>
-      <a href="/" ang="en">English</a>
-    </nav>
-  </header>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="nav-mark"></div>
+          <div class="nav-title">
+            <div class="nav-title-main">Michael Miousse</div>
+            <div class="nav-title-sub">Auteur de fantasy</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#book">Livre</a>
+          <a href="#world">Monde</a>
+          <a href="#author">Auteur</a>
+        </div>
+        <div class="nav-cta">
+          <button
+            class="btn btn-ghost"
+            type="button"
+            onclick="window.location.href='https://michael.miousse.ca/';"
+          >
+            <span class="icon">🌐</span>
+            EN
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="window.location.href='https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802';"
+          >
+            <span>Acheter sur Amazon</span>
+            <span class="icon">➜</span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  <main class="shell content">
-    <section class="hero">
-      <img src="/assets/images/book_one_fr.jpg" alt="Couverture du roman The Farm Boy's Blade de Michael Miousse" width="360" height="540">
-      <div>
-        <p class="eyebrow">Livre I de la trilogie La Lame du destin</p>
-        <h1>The Farm Boy's Blade</h1>
-        <p>L'homme le plus dangereux de la guerre a commencé l'année en nourrissant des poules.</p>
-        <p>Samuel Tralenvor n'est qu'un fils de fermier, sans formation, sans titre, et sans aucune raison de répondre à l'appel des armes. Mais les villes brûlent, les réfugiés fuient, et une ancienne ténèbre s'éveille.</p>
-        <p>À la Tour, il s'entraîne aux côtés de guerriers aguerris, rencontre une guérisseuse elfe qui combat avec une masse, et découvre dans son sang un pouvoir doré qui ne devrait pas exister.</p>
-        <p>À mesure que la guerre s'étend, Samuel apprend que l'épée ne se soucie pas de vos origines.</p>
-        <p>Seulement de la distance que vous êtes prêt à parcourir.</p>
-        <p>Avant la fin de l'année, le sort des royaumes dépendra de la capacité d'un fils de fermier à survivre à ce que la guerre exigera de lui.</p>
-        <p><a class="button" href="/fr/livre.html">Découvrir le livre</a></p>
+    <main class="shell">
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-pill">
+              <div class="hero-pill-dot"></div>
+              <span>Tome I de la trilogie La Lame du destin</span>
+            </div>
+            <div class="hero-kicker">Fantasy épique • Roman d'apprentissage • Guerre et destin</div>
+            <h1 class="hero-title">L'épée du fils des champs</h1>
+            <p class="hero-line">
+              L'homme le plus dangereux de la guerre a commencé l'année en nourrissant des poules.
+            </p>
+            <p class="hero-subtitle">
+              Samuel Tralenvor est un fils de fermier sans formation, sans titre, et sans raison de répondre
+              à l'appel des armes. Mais les villes brûlent, les réfugiés fuient, et une ancienne
+              ténèbre s'éveille.
+            </p>
+            <div class="hero-meta">
+              <span>Un pouvoir doré dans son sang qui ne devrait pas exister</span>
+              <span>S'entraîne à la Tour aux côtés de guerriers aguerris</span>
+              <span>Le sort des royaumes tiendra sur un simple fils de fermier</span>
+            </div>
+            <div class="hero-actions">
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="window.location.href='https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802';"
+              >
+                <span>Acheter le livre</span>
+                <span class="icon">⚔️</span>
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+                onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'});"
+              >
+                <span>Lire la quatrième de couverture</span>
+              </button>
+            </div>
+            <p class="hero-note">
+              À mesure que la guerre s'étend, Samuel apprend que l'épée ne se soucie pas de vos origines—seulement
+              de la distance que vous êtes prêt à parcourir.
+            </p>
+          </div>
+
+          <div class="hero-art">
+            <div class="hero-orbit"></div>
+            <div class="hero-card">
+              <div class="hero-book">
+                <img
+                  src="https://michael.miousse.ca/assets/images/book_one_fr.jpg"
+                  alt="Couverture de L'épée du fils des champs par Michael Miousse"
+                />
+                <div class="hero-glow"></div>
+              </div>
+              <div class="hero-tag">
+                <span class="label">La trilogie La Lame du destin</span>
+                <span class="badge">Tome I • Disponible maintenant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="book">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">À propos du livre</div>
+            <h2 class="section-title">Ce que la guerre exige d'un fils de fermier</h2>
+          </div>
+          <p class="section-sub">
+            Un roman fantasy épique au parfum classique avec un héros ancré, une ténèbre montante, et une
+            lame qui exige tout.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">Quatrième de couverture</div>
+              <div class="card-title">L'appel au combat</div>
+              <div class="card-body">
+                <p>
+                  Samuel Tralenvor est un fils de fermier sans formation, sans titre, et sans raison
+                  de répondre à l'appel des armes. Mais les villes brûlent, les réfugiés fuient, et une
+                  ancienne ténèbre s'éveille.
+                </p>
+                <p>
+                  À la Tour, il s'entraîne aux côtés de guerriers aguerris, rencontre une guérisseuse elfe
+                  qui combat avec une masse, et découvre dans son sang un pouvoir doré qui ne devrait pas
+                  exister.
+                </p>
+                <p>
+                  À mesure que la guerre s'étend, Samuel apprend que l'épée ne se soucie pas de vos origines—seulement
+                  de la distance que vous êtes prêt à parcourir.
+                </p>
+                <p>
+                  Avant la fin de l'année, le sort des royaumes dépendra de la capacité d'un fils de fermier à
+                  survivre à ce que la guerre exigera de lui.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Idéal pour les lecteurs</div>
+              <div class="pill-row">
+                <span class="pill highlight">Fantasy épique avec du cœur</span>
+                <span class="pill">Tours d'entraînement & académies militaires</span>
+                <span class="pill">Héros réticents</span>
+                <span class="pill">Magie liée aux lignées</span>
+                <span class="pill">Elfes, royaumes et ténèbres montantes</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="quote-card">
+              <div class="card-label">Impression d'un lecteur</div>
+              <p class="quote-text">
+                « On a l'impression d'entrer dans un monde fantasy classique, mais en suivant le garçon
+                que tout le monde ignore. Quand la guerre commence vraiment, on ne souhaite plus seulement
+                que Samuel survive — on a peur de ce qu'il pourrait devenir. »
+              </p>
+              <p class="quote-source">— Retour d'un lecteur</p>
+            </div>
+
+            <div class="card" style="margin-top: 1rem;">
+              <div class="card-label">Formats</div>
+              <div class="card-body">
+                <p>Disponible en broché et Kindle sur Amazon.</p>
+                <p class="pill-row">
+                  <span class="pill">Disponibilité mondiale sur Amazon</span>
+                  <span class="pill">Édition anglaise</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="world">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Le monde</div>
+            <h2 class="section-title">Lames, tours et ombres montantes</h2>
+          </div>
+          <p class="section-sub">
+            Entrez dans un monde où des pouvoirs anciens se réveillent, des tours forment la prochaine
+            génération de guerriers, et un fils de fermier se tient à la croisée des chemins.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">À la Tour</div>
+              <div class="card-title">Où les fils de fermiers deviennent armes</div>
+              <div class="card-body">
+                <p>
+                  La Tour est l'endroit où les royaumes envoient leurs meilleurs — et leurs désespérés.
+                  Samuel arrive les mains calleuses et sans idée de tenir une lame, et s'entraîne aux côtés
+                  de guerriers préparés depuis toujours.
+                </p>
+                <p>
+                  Là, il rencontre une guérisseuse elfe qui combat avec une masse, des commandants qui voient
+                  plus qu'ils ne disent, et des ennemis qui pourraient être les seuls à dire la vérité.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card-label">Magie & mythe</div>
+              <div class="card-title">Le pouvoir doré dans son sang</div>
+              <div class="card-body">
+                <p>
+                  Le pouvoir de Samuel n'est pas censé exister. Il brille d'or, n'obéit à aucun ordre connu,
+                  et attire l'attention de ceux qui voudraient l'utiliser — ou l'éteindre — avant que la guerre
+                  ne commence vraiment.
+                </p>
+                <p>
+                  À mesure que la ténèbre gagne, la question n'est plus de savoir si Samuel survivra à la guerre,
+                  mais si la guerre survivra à lui.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="author">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">À propos de l'auteur</div>
+            <h2 class="section-title">Michael Miousse</h2>
+          </div>
+          <p class="section-sub">
+            Michael écrit de la fantasy épique qui ressemble à un retour aux sources du genre — puis tourne
+            une page de trop.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">Note de l'auteur</div>
+              <div class="card-body">
+                <p>
+                  <strong>L'épée du fils des champs</strong> est né d'une question simple : et si l'homme le plus
+                  dangereux de la guerre était la personne que personne n'attendait ?
+                </p>
+                <p>
+                  Le parcours de Samuel porte sur bien plus que la magie et les batailles. Il s'agit de ce
+                  que deviennent les gens ordinaires quand on leur confie des fardeaux impossibles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card-label">Ailleurs</div>
+              <div class="card-body">
+                <p>Suivez Michael et recevez des nouvelles sur La trilogie La Lame du destin.</p>
+                <div class="pill-row">
+                  <span class="pill">D'autres livres à venir</span>
+                  <span class="pill">Coulisses du worldbuilding</span>
+                  <span class="pill">Mises à jour de lecture & annonces</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Michael Miousse. Tous droits réservés.</div>
+        <div class="footer-links">
+          <a href="https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802">Acheter sur Amazon</a>
+          <a href="https://michael.miousse.ca/fr/a-propos.html">À propos</a>
+          <span class="lang-switch">
+            <span>Également disponible en</span>
+            <a href="https://michael.miousse.ca/">English</a>
+          </span>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
