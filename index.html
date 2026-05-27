@@ -1,51 +1,943 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
   <title>The Farm Boy's Blade — Michael Miousse</title>
-  <meta name="description" content="Samuel Tralenvor is a farm boy thrust into war in The Farm Boy's Blade, Book One of The Woven Blade Trilogy.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://michael.miousse.ca/">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="alternate" hreflang="en" href="https://michael.miousse.ca/en/">
-  <link rel="alternate" hreflang="fr" href="https://michael.miousse.ca/fr/">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="The Farm Boy's Blade — Book One of The Woven Blade Trilogy by Michael Miousse. Epic fantasy about a farm boy drawn into a rising war and an ancient darkness."
+  />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://michael.miousse.ca/" />
+  <link rel="alternate" hreflang="en" href="https://michael.miousse.ca/" />
+  <link rel="alternate" hreflang="fr" href="https://michael.miousse.ca/fr/" />
+  <meta name="author" content="Michael Miousse" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Farm Boy's Blade — Michael Miousse" />
+  <meta property="og:description" content="The Farm Boy's Blade — Book One of The Woven Blade Trilogy by Michael Miousse. Epic fantasy about a farm boy drawn into a rising war and an ancient darkness." />
+  <meta property="og:image" content="https://michael.miousse.ca/assets/images/book_one.jpg" />
+  <meta property="og:url" content="https://michael.miousse.ca/" />
+  <meta property="og:site_name" content="Michael Miousse" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Farm Boy's Blade — Michael Miousse" />
+  <meta name="twitter:description" content="The Farm Boy's Blade — Book One of The Woven Blade Trilogy by Michael Miousse. Epic fantasy about a farm boy drawn into a rising war and an ancient darkness." />
+  <meta name="twitter:image" content="https://michael.miousse.ca/assets/images/book_one.jpg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "url": "https://michael.miousse.ca/",
+        "name": "Michael Miousse",
+        "description": "The Farm Boy's Blade — Book One of The Woven Blade Trilogy by Michael Miousse. Epic fantasy about a farm boy drawn into a rising war and an ancient darkness."
+      },
+      {
+        "@type": "Book",
+        "name": "The Farm Boy's Blade",
+        "author": {
+          "@type": "Person",
+          "name": "Michael Miousse"
+        },
+        "image": "https://michael.miousse.ca/assets/images/book_one.jpg",
+        "description": "The Farm Boy's Blade — Book One of The Woven Blade Trilogy by Michael Miousse. Epic fantasy about a farm boy drawn into a rising war and an ancient darkness.",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0b0d14;
+      --accent: #f5c76a;
+      --accent-soft: rgba(245, 199, 106, 0.18);
+      --accent-strong: #ffdd8a;
+      --text: #f5f5f7;
+      --muted: #a3a7b7;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --error: #ff6b6b;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.7);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+    }
 
-  <meta property="og:type" content="book">
-  <meta property="og:title" content="The Farm Boy's Blade — Michael Miousse">
-  <meta property="og:description" content="Samuel Tralenvor is a farm boy thrust into war in The Farm Boy's Blade, Book One of The Woven Blade Trilogy.">
-  <meta property="og:image" content="https://michael.miousse.ca/assets/images/book_one.jpg">
-  <meta property="og:url" content="https://michael.miousse.ca/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Farm Boy's Blade — Michael Miousse">
-  <meta name="twitter:description" content="Samuel Tralenvor is a farm boy thrust into war in The Farm Boy's Blade, Book One of The Woven Blade Trilogy.">
-  <meta name="twitter:image" content="https://michael.miousse.ca/assets/images/book_one.jpg">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #151827 0, #05060a 55%, #020308 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.5rem 3rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 10, 0.96),
+        rgba(5, 6, 10, 0.88),
+        transparent
+      );
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 40% 60% 55% 45%;
+      background: radial-gradient(circle at 30% 20%, #ffe9b0 0, #f5c76a 30%, #8b5b1f 70%, #1b1207 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 18px 40px rgba(0, 0, 0, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-mark::after {
+      content: "";
+      position: absolute;
+      inset: 18% 22%;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      opacity: 0.7;
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .nav-title-main {
+      font-family: "Cinzel", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-title-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width 0.22s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out,
+        border-color 0.15s ease-out;
+      background: none;
+      color: inherit;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at 0 0, #fff3c4 0, #f5c76a 40%, #b87a1f 100%);
+      color: #1a1206;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(10, 12, 20, 0.8);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(15, 18, 30, 0.95);
+    }
+
+    .btn span.icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hero {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-copy {
+      position: relative;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.7rem 0.25rem 0.3rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(245, 199, 106, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.2), rgba(5, 6, 10, 0.9));
+      color: var(--accent-strong);
+      font-size: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-pill-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffe9b0 0, #f5c76a 40%, #8b5b1f 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-strong);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.4rem, 3.2vw + 1.4rem, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-line {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--accent-strong);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(245, 199, 106, 0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-art {
+      position: relative;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: -18%;
+      background:
+        radial-gradient(circle at 10% 0, rgba(245, 199, 106, 0.18), transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(88, 130, 255, 0.18), transparent 55%);
+      filter: blur(4px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 26px;
+      padding: 0.9rem;
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.12), rgba(5, 6, 10, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow-soft);
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .hero-book {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .hero-book img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: auto 12% -8%;
+      height: 40px;
+      background: radial-gradient(circle at 50% 0, rgba(245, 199, 106, 0.7), transparent 70%);
+      opacity: 0.9;
+      filter: blur(8px);
+    }
+
+    .hero-tag {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-tag span.label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 500;
+      color: var(--accent-strong);
+    }
+
+    .hero-tag span.badge {
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(5, 6, 10, 0.9);
+    }
+
+    .section {
+      margin-top: 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-strong);
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 26rem;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+      <a href="#newsletter">Newsletter</a>
+    .card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(145deg, rgba(10, 12, 20, 0.96), rgba(5, 6, 10, 0.98));
+      padding: 1.4rem 1.5rem;
+    }
+
+    .card + .card {
+      margin-top: 1rem;
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card-body p + p {
+      margin-top: 0.6rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(5, 6, 10, 0.9);
+      color: var(--muted);
+    }
+
+    .pill.highlight {
+      border-color: rgba(245, 199, 106, 0.7);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+    }
+
+    .quote-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(245, 199, 106, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(245, 199, 106, 0.18), rgba(5, 6, 10, 0.98));
+      padding: 1.4rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-card::before {
+      content: "“";
+      position: absolute;
+      font-family: "Cinzel", serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: rgba(245, 199, 106, 0.12);
+      top: -1.2rem;
+      left: 0.4rem;
+    }
+
+    .quote-text {
+      font-size: 0.95rem;
+      font-style: italic;
+      margin-bottom: 0.7rem;
+    }
+
+    .quote-source {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: auto;
+      padding: 1.5rem 1.5rem 2.2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-strong);
+    }
+
+    .lang-switch {
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .lang-switch span {
+      opacity: 0.6;
+    }
+
+    .lang-switch a {
+      color: var(--accent-strong);
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .grid-two,
+      .newsletter {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .nav {
+        padding-inline: 1.2rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+
+      .shell {
+        padding-inline: 1.2rem;
+      }
+
+      .newsletter {
+        padding: 1.3rem 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="shell top-nav">
-    <a href="/" class="brand">Michael Miousse</a>
-    <nav aria-label="Main">
-      <a href="/">Book</a>
-      <a href="/en/about.html">About</a>
-      <a href="/fr/" lang="fr">Français</a>
-    </nav>
-  </header>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="nav-mark"></div>
+          <div class="nav-title">
+            <div class="nav-title-main">Michael Miousse</div>
+            <div class="nav-title-sub">Epic Fantasy Author</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#book">Book</a>
+          <a href="#world">World</a>
+          <a href="#author">Author</a>  
+        </div>
+        <div class="nav-cta">
+          <button
+            class="btn btn-ghost"
+            type="button"
+            onclick="window.location.href='https://michael.miousse.ca/fr/';"
+          >
+            <span class="icon">🌐</span>
+            FR
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            onclick="window.location.href='https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802';"
+          >
+            <span>Buy on Amazon</span>
+            <span class="icon">➜</span>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-  <main class="shell content">
-    <section class="hero">
-      <img src="/assets/images/book_one.jpg" alt="Cover of The Farm Boy's Blade by Michael Miousse" width="360" height="540">
-      <div>
-        <p class="eyebrow">Book One of The Woven Blade Trilogy</p>
-        <h1>The Farm Boy's Blade</h1>
-        <p>The most dangerous man in the war started the year feeding chickens.</p>
-        <p>Samuel Tralenvor is a farm boy with no training, no title, and no business answering the call to fight. But towns are burning, refugees are fleeing, and an ancient darkness is rising.</p>
-        <p>At the Tower, he trains beside seasoned warriors, meets an elven healer who fights with a mace, and discovers a golden power in his blood that should not exist.</p>
-        <p>As war spreads, Samuel learns the blade does not care where you come from.</p>
-        <p>Only how far you are willing to go.</p>
-        <p>Before the year is over, the fate of kingdoms will turn on whether a farm boy can survive what the war asks of him.</p>
-        <p><a class="button" href="https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802" target="_blank" rel="noopener noreferrer">Buy on Amazon</a></p>
+    <main class="shell">
+      <section class="hero" id="top">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="hero-pill">
+              <div class="hero-pill-dot"></div>
+              <span>Book One of The Woven Blade Trilogy</span>
+            </div>
+            <div class="hero-kicker">Epic fantasy • Coming of age • War & destiny</div>
+            <h1 class="hero-title">The Farm Boy's Blade</h1>
+            <p class="hero-line">
+              The most dangerous man in the war started the year feeding chickens.
+            </p>
+            <p class="hero-subtitle">
+              Samuel Tralenvor is a farm boy with no training, no title, and no business answering
+              the call to fight. But towns are burning, refugees are fleeing, and an ancient
+              darkness is rising.
+            </p>
+            <div class="hero-meta">
+              <span>Golden power in his blood that should not exist</span>
+              <span>Training at the Tower beside seasoned warriors</span>
+              <span>Kingdoms will rise or fall on a single farm boy</span>
+            </div>
+            <div class="hero-actions">
+              <button
+                class="btn btn-primary"
+                type="button"
+                onclick="window.location.href='https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802';"
+              >
+                <span>Get the book</span>
+                <span class="icon">⚔️</span>
+              </button>
+              <button
+                class="btn btn-ghost"
+                type="button"
+                onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'});"
+              >
+                <span>Read the back cover</span>
+              </button>
+            </div>
+            <p class="hero-note">
+              As war spreads, Samuel learns the blade does not care where you come from—only how far
+              you are willing to go.
+            </p>
+          </div>
+
+          <div class="hero-art">
+            <div class="hero-orbit"></div>
+            <div class="hero-card">
+              <div class="hero-book">
+                <img
+                  src="https://michael.miousse.ca/assets/images/book_one.jpg"
+                  alt="Cover of The Farm Boy's Blade by Michael Miousse"
+                />
+                <div class="hero-glow"></div>
+              </div>
+              <div class="hero-tag">
+                <span class="label">The Woven Blade Trilogy</span>
+                <span class="badge">Book One • Available now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="book">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About the book</div>
+            <h2 class="section-title">What the war asks of a farm boy</h2>
+          </div>
+          <p class="section-sub">
+            A classic-feeling epic fantasy with a grounded hero, a rising darkness, and a blade
+            that demands everything.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">Back cover</div>
+              <div class="card-title">The call to fight</div>
+              <div class="card-body">
+                <p>
+                  Samuel Tralenvor is a farm boy with no training, no title, and no business
+                  answering the call to fight. But towns are burning, refugees are fleeing, and an
+                  ancient darkness is rising.
+                </p>
+                <p>
+                  At the Tower, he trains beside seasoned warriors, meets an elven healer who
+                  fights with a mace, and discovers a golden power in his blood that should not
+                  exist.
+                </p>
+                <p>
+                  As war spreads, Samuel learns the blade does not care where you come from—only how
+                  far you are willing to go.
+                </p>
+                <p>
+                  Before the year is over, the fate of kingdoms will turn on whether a farm boy can
+                  survive what the war asks of him.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-label">Perfect for readers who love</div>
+              <div class="pill-row">
+                <span class="pill highlight">Epic fantasy with heart</span>
+                <span class="pill">Training towers & war colleges</span>
+                <span class="pill">Reluctant heroes</span>
+                <span class="pill">Magic tied to bloodlines</span>
+                <span class="pill">Elves, kingdoms, and looming darkness</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="quote-card">
+              <div class="card-label">Early reader impression</div>
+              <p class="quote-text">
+                “It feels like stepping into a classic fantasy world, but following the one boy
+                everyone else overlooks. By the time the war truly begins, you’re not just hoping
+                Samuel survives—you’re terrified of what he might become.”
+              </p>
+              <p class="quote-source">— Reader feedback</p>
+            </div>
+
+            <div class="card" style="margin-top: 1rem;">
+              <div class="card-label">Formats</div>
+              <div class="card-body">
+                <p>Available in paperback and Kindle on Amazon.</p>
+                <p class="pill-row">
+                  <span class="pill">Global Amazon availability</span>
+                  <span class="pill">English edition</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="world">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">The world</div>
+            <h2 class="section-title">Blades, towers, and rising shadows</h2>
+          </div>
+          <p class="section-sub">
+            Step into a world where ancient powers wake, towers train the next generation of
+            warriors, and a farm boy stands at the fault line.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">At the Tower</div>
+              <div class="card-title">Where farm boys become weapons</div>
+              <div class="card-body">
+                <p>
+                  The Tower is where kingdoms send their best—and their desperate. Samuel arrives
+                  with calloused hands and no idea how to hold a blade, training beside warriors who
+                  have been preparing for this war their entire lives.
+                </p>
+                <p>
+                  Here he meets an elven healer who fights with a mace, commanders who see more than
+                  they say, and enemies who might be the only ones telling the truth.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card-label">Magic & myth</div>
+              <div class="card-title">The golden power in his blood</div>
+              <div class="card-body">
+                <p>
+                  Samuel’s power is not supposed to exist. It glows gold, answers to no known
+                  order, and draws the attention of those who would use it—or end it—before the war
+                  truly begins.
+                </p>
+                <p>
+                  As the darkness spreads, the question is no longer whether Samuel can survive the
+                  war, but whether the war can survive him.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="author">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About the author</div>
+            <h2 class="section-title">Michael Miousse</h2>
+          </div>
+          <p class="section-sub">
+            Michael writes epic fantasy that feels like coming home to the genre—then turning one
+            page too far.
+          </p>
+        </div>
+
+        <div class="grid-two">
+          <div>
+            <div class="card">
+              <div class="card-label">Author note</div>
+              <div class="card-body">
+                <p>
+                  <strong>The Farm Boy’s Blade</strong> began with a simple question: what if the
+                  most dangerous man in the war was the one person no one expected to matter?
+                </p>
+                <p>
+                  Samuel’s journey is about more than magic and battles. It’s about what happens
+                  when ordinary people are asked to carry impossible burdens—and what they become
+                  when they refuse to break.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="card-label">Elsewhere</div>
+              <div class="card-body">
+                <p>Connect with Michael and follow news about The Woven Blade Trilogy.</p>
+                <div class="pill-row">
+                  <span class="pill">More books coming in the trilogy</span>
+                  <span class="pill">Behind-the-scenes worldbuilding</span>
+                  <span class="pill">Reading updates & announcements</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Michael Miousse. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="https://www.amazon.com.au/Farm-Boys-Blade-Michael-Miousse/dp/0645874802"
+            >Buy on Amazon</a
+          >
+          <a href="#author">About</a>
+          <span class="lang-switch">
+            <span>Also available in</span>
+            <a href="https://michael.miousse.ca/fr/">Français</a>
+          </span>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
